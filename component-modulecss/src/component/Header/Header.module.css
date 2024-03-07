@@ -1,0 +1,11 @@
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #091078;
+}
+  
+.dropdown{
+display: flex;
+list-style: none;
+}
+
