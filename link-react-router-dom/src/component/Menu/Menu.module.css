@@ -1,0 +1,13 @@
+li{
+    margin: 5px 25px;
+    padding: 10px;
+    list-style: none;
+    color:white
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: red;
+}

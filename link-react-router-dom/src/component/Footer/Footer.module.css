@@ -1,0 +1,23 @@
+footer{
+    background-color: #091078;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+}
+.iconcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+} 
+
+.dropdowncontainer{
+    margin: 0px;
+}
+
+.dropdown{
+    display: flex;
+    list-style: none;
+}
+    
