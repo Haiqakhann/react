@@ -8,23 +8,23 @@ import style from './Icon.module.css'
 const list = [
     {
         name : faFacebookF,
-        link : '/www.facebook.com'
+        link : 'www.facebook.com'
     },
     {
         name : faInstagram,
-        link : '/www.instagram.com'
+        link : 'www.instagram.com'
     },
     {
         name : faTwitter,
-        link : '/www.twitter.com'
+        link : 'www.twitter.com'
     },
     {
         name : faGoogle,
-        link : '/www.google.com'
+        link : 'www.google.com'
     },
     {
         name : faYoutube,
-        link : '/www.youtube.com'
+        link : 'www.youtube.com'
     }
 ]
 
