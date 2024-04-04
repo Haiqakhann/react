@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import style from './Menu.module.css'
+import { NavLink } from "react-router-dom";
 
 let menuList =  [
     {
@@ -8,23 +9,18 @@ let menuList =  [
     },
     {
         name : 'About',
-        link : '/about'
+        link : 'about'
     },
     {
         name : 'Portfolio',
-        link : '/portfolio'
+        link : 'portfolio'
     },
     {
         name : 'ContactUs',
-        link : '/contactus'
+        link : 'contactus'
     }
 ]
 
-// const li = {
-//     margin: "5px 25px",
-//     padding: "10px",
-//     color : "white"
-// }
 
 
 
@@ -32,8 +28,19 @@ const Menu = ()=>{
    return(
     menuList.map((item,i)=>{
         return(
-            <li key={i} className={style.li}>
-                <Link className={style.a} to={item.link}>{item.name}</Link>
+            <li key={i} >
+                <NavLink 
+                    style={({ isActive}) => {
+                        return {
+                          color: isActive ? "pink" : "white"
+                        };
+                    }}
+                    // className={({ isActive, isPending }) => {
+                    //     return isActive ? "active" : isPending ? "pending" : "";
+                    // }}
+                    to={item.link} >
+                        {item.name}
+                </NavLink>
             </li>
         )
     })
