@@ -12,9 +12,8 @@ const port = process.env.PORT
 import cors from 'cors'
 
 app.set('view engine','ejs')
-app.use(Express.urlencoded())
+app.use(Express.urlencoded({extended:'false'}))
 app.use(Express.json())
-app.use(Express.static('public'))
 app.use(cors())
 
 
