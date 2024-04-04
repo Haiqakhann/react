@@ -22,23 +22,6 @@ const Form = ()=>{
         e.preventDefault()
     
 
-//         const options = {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify(formdata)
-//         };
-
-
-//         fetch('http://localhost:4000/', options)
-//             .then(response => {
-//                 return response.json();
-//             })
-//             .then(data => console.log(data))
-//             .catch(error => console.error(error));
-// }
-
         const options = {
             method : 'POST',
             headers:{
