@@ -43,7 +43,7 @@ const Useeffect = () => {
 
     return (
         <>
-            <h3>live filtering</h3>
+            <h3>live filtering using useEffect</h3>
             <form >
                 <div>
                     <label htmlFor="input-type">Filter by <b>type</b></label>
