@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 
 
+
 const DashboardC = ()=>{
     const user = JSON.parse(localStorage.getItem('user'));
     const navigate = useNavigate();
@@ -22,6 +23,7 @@ const DashboardC = ()=>{
       <div>
         <h1>Welcome to React Firebase Auth using email and password</h1>
         <h2>{user && user.email}</h2>
+
         <button onClick={handleLogout}>Logout</button>
       </div>
     )

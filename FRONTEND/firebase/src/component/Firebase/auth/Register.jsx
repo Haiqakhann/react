@@ -2,6 +2,7 @@ import { useState ,useEffect} from "react"
 import { auth } from "../../../config/firebase-config";
 import { createUserWithEmailAndPassword} from 'firebase/auth'
 import {  useNavigate } from "react-router-dom";
+// import { Docadd } from "../crud/Crud";
 
 const RegisterForm = ()=>{
 
@@ -25,7 +26,7 @@ const RegisterForm = ()=>{
     }
 
 
-    const Onsumbit  =async  (e)=>{
+    const Onsumbit  =async (e)=>{
         e.preventDefault()
         console.log(formdata)
         
@@ -35,6 +36,7 @@ const RegisterForm = ()=>{
             const user = userCredential.user
             localStorage.setItem('token', user.accessToken);
             localStorage.setItem('user', JSON.stringify(user));
+            // Docadd(formdata)
             navigate("/");
         })
         .catch((e) => {

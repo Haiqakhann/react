@@ -1,10 +1,11 @@
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import Layout from "../Layout"
 
 const Protected = () => {
   const token = localStorage.getItem('token');
 
   return (
-    token ? <Outlet /> : <Navigate to="/login" />
+    token ? <Layout /> : <Navigate to="/login" />
   )
 }
 

@@ -5,7 +5,9 @@ import Login from './page/Login';
 import Dashboard from './page/Dashboard';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Protected from './component/Firebase/auth/Protected';
-
+import Crud from './component/Firebase/crud/Crud';
+import Uploadfile from './component/Firebase/Storage/UploadFile';
+import DisplayFile from './component/Firebase/Storage/DisplayFile';
 
 function App() {
 
@@ -15,13 +17,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Protected />} >
-            <Route path="/" index element={<Dashboard />} />
+            <Route path='' element={<Dashboard/>}>
+              <Route path='employee' element={<Crud/>}/>
+              <Route path="/upload" element={<Uploadfile />} />
+              <Route path="/display" element={<DisplayFile />} />
+            </Route>
           </Route>
           <Route path ='/login' element={<Login/>}/>
           <Route path ='/register' element={<Register/>}/>
         </Routes>
       </BrowserRouter>
-
     </>
     );
 }
