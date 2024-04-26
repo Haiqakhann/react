@@ -5,9 +5,11 @@ import Login from './page/Login';
 import Dashboard from './page/Dashboard';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Protected from './component/Firebase/auth/Protected';
-import Crud from './component/Firebase/crud/Crud';
+import Crud from './component/Firebase/Firestore/Crud';
 import Uploadfile from './component/Firebase/Storage/UploadFile';
-import DisplayFile from './component/Firebase/Storage/DisplayFile';
+import DisplayImage from './component/Firebase/Storage/DisplayFile';
+import RCrud from './component/Firebase/Realtime/Crud';
+
 
 function App() {
 
@@ -20,7 +22,8 @@ function App() {
             <Route path='' element={<Dashboard/>}>
               <Route path='employee' element={<Crud/>}/>
               <Route path="/upload" element={<Uploadfile />} />
-              <Route path="/display" element={<DisplayFile />} />
+              <Route path="/display" element={<DisplayImage/>} />
+              <Route path="/realtime" element={<RCrud />} />
             </Route>
           </Route>
           <Route path ='/login' element={<Login/>}/>

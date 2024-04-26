@@ -8,6 +8,7 @@ const Dashboard = ()=>{
             <Link to='employee'>Crud</Link>
             <Link to='upload'>UploadFile</Link>
             <Link to='display'>DisplayFile</Link>
+            <Link to='realtime'>Realtime</Link>
             <main>
                 <Outlet/>
             </main>           
